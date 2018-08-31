@@ -1,4 +1,4 @@
-## Meteor Tuts - http://www.meteor-tuts.com
+## Milkway - http://milkyway.cultofcoders.com
 
 This package has been cloned from:
 https://github.com/meteor/docs

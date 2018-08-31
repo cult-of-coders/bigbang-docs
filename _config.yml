@@ -4,11 +4,11 @@
 
 # Site
 title: Meteor Tutorials
-subtitle:
+? subtitle
 description: Meteor Tutorials - From Noob to PRO
 author: Theodor Diaconu
 language: en
-timezone:
+? timezone
 
 apis:
   ga: UA-40568040-10
@@ -19,38 +19,45 @@ apis:
 sidebar_categories:
   null:
     - index
-  'Chapter 1':
-    - chapters/1/intro
-    - chapters/1/methods
-    - chapters/1/collections
-    - chapters/1/users
-    - chapters/1/reactivity
-    - chapters/1/pubsub
-    - chapters/1/security
-    - chapters/1/meteorSnacks
-    - chapters/1/conclusion
-  'Chapter 2':
-    - chapters/2/intro
-    - chapters/2/react
-    - chapters/2/css
-    - chapters/2/conclusion
-  'Chapter 3':
-    - chapters/3/intro
-    - chapters/3/persistence-layer
-    - chapters/3/testing
-    - chapters/3/services
-    - chapters/3/events
-    - chapters/3/methods
-    - chapters/3/publications
-    - chapters/3/fixtures
-    - chapters/3/reusable-modules
-    - chapters/3/linting
-    - chapters/3/emails
-    - chapters/3/microservices
-    - chapters/3/structure
-    - chapters/3/conclusion
+  'Starterpack':
+    # Setup the project, ddp-silencer
+    # View GraphQL playground
+    # Create the first query
+    # Show-case GraphQL Voyager
+    - starterpack/setting-up.md
+    - starterpack/structure.md
+    - starterpack/relations.md
 
-github_repo: 'cult-of-coders/meteor-tuts'
+    - starterpack/morpher.md
+    - starterpack/accounts.md
+    - starterpack/security.md
+    - starterpack/reactivity.md
+
+    - starterpack/services.md
+    - starterpack/events.md
+    - starterpack/testing.md
+
+    - starterpack/deployment.md
+
+  'React':
+    - react/setting-up.md
+    - react/styling.md
+    - react/forms.md
+    - react/testing.md
+
+  'Recipes':
+    - recipes/queries.md
+    - recipes/mutations.md
+    - recipes/easify.md
+    - recipes/uploads.md
+
+  'Scaffolding':
+    - cli/basic-generators.md
+    - cli/entities.md
+    - cli/list.md
+    - cli/crud.md
+
+github_repo: 'cult-of-coders/bigbang'
 content_root: 'source'
 
 # themeing
@@ -58,8 +65,8 @@ favicon: '/images/favicon.png'
 
 logo:
   nav_mobile: '/images/logo.png'
-  url: 'http://www.cultofcoders.com'
-  title: 'Meteor Tuts'
+  url: 'http://www.big-bang.cc'
+  title: 'BigBang'
   subtitle: ''
 
 nav_links:
@@ -80,7 +87,7 @@ nav_links:
     target: _new
 
 social_links:
-  github: 'https://github.com/cult-of-coders/meteor-tuts.com'
+  github: 'https://github.com/cult-of-coders/big-bang'
   twitter: '@culotfcoders'
 
 # URL
@@ -88,7 +95,7 @@ social_links:
 url: http://www.meteor-tuts.com
 root: /
 permalink: :year/:month/:day/:title/
-permalink_defaults:
+? permalink_defaults
 
 # Directory
 source_dir: source
@@ -98,7 +105,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+? skip_render
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -114,12 +121,12 @@ highlight:
   enable: true
   line_number: true
   auto_detect: true
-  tab_replace:
+  ? tab_replace
 
 # Category & Tag
 default_category: uncategorized
-category_map:
-tag_map:
+? category_map
+? tag_map
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
