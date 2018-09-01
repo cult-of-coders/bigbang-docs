@@ -23,7 +23,7 @@ meteor npm i -S react-apollo apollo-live-client apollo-client apollo-cache-inmem
 # If you're looking into Server Side Rendering with React
 meteor npm i -S react-dom react-router apollo-link-schema
 
-# Now we add the package
+# Now we add the package for a plug and play zero-config graphql server with meteor and other helpful features  
 meteor add cultofcoders:apollo
 
 # Optional but highly recommended (so you can import .gql/.graphql files)
@@ -45,11 +45,11 @@ Add the following to `package.json`, it will allow us to specify the entry point
 ```
 
 ```
-mkdir -p src/startup/client src/startup/server src/api
-touch src/startup/client/index.js src/startup/server/index.js src/api/index.js
+mkdir -p src/startup/client src/startup/server src/api tests
+touch src/startup/client/index.js src/startup/server/index.js src/api/index.js tests/main.js
 ```
 
-Now go to `src/startup/server/index.js` and add this:
+Now go to `src/startup/server/apollo.js` and add this in order to initialize GraphQL:
 
 ```js
 // src/startup/server/apollo.js
@@ -79,6 +79,7 @@ load({
 ```
 
 ```js
+// src/startup/server/index.js
 import '../../api';
 import './apollo';
 ```
@@ -101,11 +102,11 @@ query {
 
 ## Module Aliases
 
-In addition to what we just described, you can also create module aliases so:
+In addition to what we just described, you can also create module aliases so run the following command:
 
-`npm i --save-dev babel-plugin-module-resolver`
+`meteor npm i --save-dev babel-plugin-module-resolver`
 
-In `.babelrc`
+Create a file `.babelrc` in the root folder
 
 ```
 {

@@ -151,7 +151,7 @@ And inside your resolver:
 }
 ```
 
-Now if you go to your [GraphQL Playground](http://localhost:3000/graphql) you can run this:
+Now if you go to http://localhost:3000/graphql you can run this:
 
 ```
 query {

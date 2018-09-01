@@ -23,7 +23,7 @@ We will introduce to following folders:
 Our GraphQL schema will exist in: `src/api` and it is composed of `entities` and `modules`. An entity is a type, but since type is such a generic word in JS world, we are going to refer to them as entities.
 
 ```gql
-# entities/User.gql
+# src/api/entities/User.gql
 type User {
   _id: ID!
   firstName: String
@@ -33,7 +33,7 @@ type User {
 ```
 
 ```js
-// entites/User.resolvers.js
+// src/api/entites/User.resolvers.js
 export default {
   User: {
     fullName: user => `${user.firstName} ${user.lastName}`,
@@ -44,7 +44,7 @@ export default {
 And the place where we aggregate them all:
 
 ```js
-// entities/index.js
+// src/api/entities/index.js
 
 import UserType from './User.gql';
 import UserResolvers from './User.resolvers.js';
@@ -61,7 +61,7 @@ export default {
 
 We regard as a GraphQL module an object that contains typeDefs and/or resolvers. Using the `graphql-load` package this allows us to work with these modules and allows us to think about them logically separated.
 
-In our case inside `entities/index.js` what we export is a GraphQL Module.
+In our case inside `src/api/entities/index.js` what we export is a GraphQL Module.
 
 So to aggregate and use that, we'll create our entry point for loading inside:
 
@@ -79,7 +79,7 @@ load([EntitiesModule, UserModule, PostModule]);
 A sample implementation of the `post` module inside `src/api/modules/post`:
 
 ```
-# ./typeDefs.gql
+# src/api/modules/post/typeDefs.gql
 type Query {
   posts: [Post]
 }
@@ -90,7 +90,7 @@ type Mutation {
 ```
 
 ```js
-// ./resolvers.js
+// src/api/modules/post/resolvers.js
 export default {
   Query: {
     posts: () => {
@@ -235,7 +235,7 @@ Posts.attachSchema(PostSchema);
 ```
 
 ```js
-// src/db/posts/index.js
+// src/db/index.js
 import Posts from './posts/collection';
 
 export { Posts };
