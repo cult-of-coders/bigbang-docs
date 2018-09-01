@@ -112,7 +112,7 @@ export default {
 };
 ```
 
-Pretty straight forward right ? The reason we do it like this, by centralizing security in one place,
+Pretty straight forward right? The reason we do it like this, by centralizing security in one place,
 is to remove boilerplate code inside our methods and keep separation of concerns. You can do it however you want it, there is no right or wrong way to do it,
 depends on your use-case, but we believe that it is easier to maintain, and newly onboarded developers were writing secure
 code right from the start!

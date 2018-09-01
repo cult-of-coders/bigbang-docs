@@ -8,7 +8,7 @@ disqusPage: 'Starterpack:Deployment'
 
 ## PM2 Meteor
 
-You can setup your server on AWS or DigitalOcean. We recommend you use `Ubuntu 16.04` to quickly deploy without hassles.
+You can setup your server on [AWS](https://aws.amazon.com) or [DigitalOcean](https://www.digitalocean.com/). We recommend you use `Ubuntu 16.04` to quickly deploy without hassles.
 
 We have the ability to quickly deploy our apps. One of the easiest way to do it, is to use `pm2-meteor`:
 
