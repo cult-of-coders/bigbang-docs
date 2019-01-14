@@ -19,45 +19,45 @@ apis:
 sidebar_categories:
   null:
     - index
-  'Starterpack':
-    # Setup the project, ddp-silencer
-    # View GraphQL playground
-    # Create the first query
-    # Show-case GraphQL Voyager
-    - starterpack/setting-up.md
-    - starterpack/structure.md
-    - starterpack/relations.md
 
-    - starterpack/morpher.md
-    - starterpack/accounts.md
-    - starterpack/security.md
-    - starterpack/reactivity.md
+  'Backend Basics':
+    - backend/setting-up.md
+    - backend/queries-and-mutations.md
+    - backend/database.md
+    - backend/authentication.md
+    - backend/context.md
+    - backend/structure.md
+    - backend/services.md
+    - backend/events.md
+    - backend/authorization.md
+    - backend/relational-data.md
 
-    - starterpack/services.md
-    - starterpack/events.md
-    - starterpack/testing.md
-
-    - starterpack/deployment.md
-
-  'React':
-    - react/setting-up.md
-    - react/styling.md
-    - react/forms.md
-    - react/testing.md
+  'Frontend Basics':
+    - frontend/setting-up.md
+    - frontend/routing.md
+    - frontend/queries_and_mutations.md
+    - frontend/forms.md
+    - frontend/mobx_basics.md
+    - frontend/authentication.md
+    - frontend/morpher.md
+    - frontend/molecule.md
+    - frontend/easify.md
 
   'Recipes':
-    - recipes/queries.md
-    - recipes/mutations.md
-    - recipes/easify.md
-    - recipes/uploads.md
+    - recipes/testing.md
+    - recipes/deployment.md
+    - recipes/uploading.md
+    - recipes/emails.md
+    - recipes/reactive-data.md
+    - recipes/working-with-dates.md
+    - recipes/advanced-collections.md
 
-  'Scaffolding':
-    - cli/basic-generators.md
-    - cli/entities.md
-    - cli/list.md
-    - cli/crud.md
+  'Scaffolding Tool':
+    - cli/setup.md
+    - cli/basics.md
+    - cli/ui.md
 
-github_repo: 'cult-of-coders/bigbang'
+github_repo: 'cult-of-coders/bigbang-tuts'
 content_root: 'source'
 
 # themeing
@@ -70,7 +70,7 @@ logo:
   subtitle: ''
 
 nav_links:
-  Meteor jobs:
+  Cult of Coders:
     url: https://www.cultofcoders.com
     taget: _new
   Atmosphere:

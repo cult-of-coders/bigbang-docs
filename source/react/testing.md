@@ -25,7 +25,7 @@ And import this file inside `src/__tests__/client.js`.
 Now let's write a test for the previous component we built in the Form.
 
 ```js
-// src/ui/components/Login/__tests__/index.test.js
+// src/ui/components/Login/__tests__/index.js
 import { expect } from 'chai';
 import React from 'react';
 import { mount } from 'enzyme';
