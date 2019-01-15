@@ -65,7 +65,7 @@ meteor npm i -S event-emitter
 ```
 
 ```js
-// file: /src/api/events.js
+// file: /src/modules/events.js
 import EventEmitter from 'event-emitter';
 
 const Emitter = new EventEmitter();
@@ -80,7 +80,7 @@ export { Emitter, Events };
 Now we need to say to the system that an item has been created:
 
 ```js
-import { Emitter, Events } from '/src/api/events';
+import { Emitter, Events } from '/src/modules/events';
 
 function createItem(userId, data) {
   const itemId = Items.insert(data);
@@ -93,8 +93,8 @@ Now, notifications and payment are two modules that aren't necessarily related, 
 This is why our listeners, should be close to their code:
 
 ```js
-// file: /src/api/notifications/listeners.js
-import { Emitter, Events } from '/src/api/events';
+// file: /src/modules/notifications/listeners.js
+import { Emitter, Events } from '/src/modules/events';
 
 Emitter.on(Events.ITEM_CREATED, function({ itemId }) {
   notifyInterestedPeopleInSale(itemId);
@@ -103,8 +103,8 @@ Emitter.on(Events.ITEM_CREATED, function({ itemId }) {
 ```
 
 ```js
-// file: /src/api/payments/listeners.js
-import { Emitter, Events } from '/src/api/events';
+// file: /src/modules/payments/listeners.js
+import { Emitter, Events } from '/src/modules/events';
 
 Emitter.on(Events.ITEM_CREATED, function({ itemId }) {
   processCharging(itemId);

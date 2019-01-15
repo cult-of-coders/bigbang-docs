@@ -21,41 +21,42 @@ sidebar_categories:
     - index
 
   'Backend Basics':
-    - backend/setting-up.md
-    - backend/queries-and-mutations.md
-    - backend/database.md
-    - backend/authentication.md
-    - backend/context.md
-    - backend/structure.md
-    - backend/services.md
-    - backend/events.md
-    - backend/authorization.md
-    - backend/relational-data.md
+    - backend/setting-up
+    - backend/queries-and-mutations
+    - backend/database
+    - backend/authentication
+    - backend/structure
+    - backend/services
+    - backend/events
+    - backend/testing
+    - backend/relations
+    - backend/deployment
+    # - backend/authorization.md
 
-  'Frontend Basics':
-    - frontend/setting-up.md
-    - frontend/routing.md
-    - frontend/queries_and_mutations.md
-    - frontend/forms.md
-    - frontend/mobx_basics.md
-    - frontend/authentication.md
-    - frontend/morpher.md
-    - frontend/molecule.md
-    - frontend/easify.md
+  # 'Frontend Basics':
+  #   - frontend/setting-up.md
+  #   - frontend/routing.md
+  #   - frontend/queries_and_mutations.md
+  #   - frontend/forms.md
+  #   - frontend/mobx_basics.md
+  #   - frontend/authentication.md
+  #   - frontend/morpher.md
+  #   - frontend/molecule.md
+  #   - frontend/easify.md
 
-  'Recipes':
-    - recipes/testing.md
-    - recipes/deployment.md
-    - recipes/uploading.md
-    - recipes/emails.md
-    - recipes/reactive-data.md
-    - recipes/working-with-dates.md
-    - recipes/advanced-collections.md
+  # 'Recipes':
+  #   - recipes/testing.md
+  #   - recipes/deployment.md
+  #   - recipes/uploading.md
+  #   - recipes/emails.md
+  #   - recipes/reactive-data.md
+  #   - recipes/working-with-dates.md
+  #   - recipes/advanced-collections.md
 
-  'Scaffolding Tool':
-    - cli/setup.md
-    - cli/basics.md
-    - cli/ui.md
+  # 'Scaffolding Tool':
+  #   - cli/setup.md
+  #   - cli/basics.md
+  #   - cli/ui.md
 
 github_repo: 'cult-of-coders/bigbang-tuts'
 content_root: 'source'

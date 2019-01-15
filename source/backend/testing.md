@@ -50,7 +50,7 @@ meteor npm test
 ```
 
 ```js
-// src/api/modules/item/services/ItemService.js
+// src/modules/items/services/ItemService.js
 export default class ItemService {
   constructor({ db }) {
     this.db = db;
@@ -65,7 +65,7 @@ export default class ItemService {
 ```
 
 ```js
-// src/api/modules/item/services/ItemService.test.js
+// src/modules/items/services/ItemService.test.js
 import ItemServiceModel from './ItemServiceModel';
 import { assert } from 'chai';
 
@@ -88,7 +88,7 @@ describe('ItemServiceModel', function() {
 
 ```js
 // src/__tests__/server.js
-import '../api/modules/item/services/ItemService.test';
+import '../modules/items/services/ItemService.test';
 ```
 
 Now open your browser http://localhost:3050 and you'll have a nice interface to see your tests, and you can click on any individual test or group of tests to run them in isolation. (This is good when you have a large-suite and just one failing test)

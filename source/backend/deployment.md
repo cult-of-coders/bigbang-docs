@@ -103,13 +103,11 @@ If you are looking to run the playground in your production app, you have to exp
 ```js
 import { initialize } from 'meteor/cultofcoders:apollo';
 
-initialize(
-  {
-    introspection: true,
-  },
-  {
-    gui: true,
-  }
+initialize({
+  introspection: true,
+}, {
+  gui: true,
+}
 );
 ```
 

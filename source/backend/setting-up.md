@@ -13,6 +13,11 @@ We are going to work with Meteor for the following reasons:
 
 You can install [Meteor here](https://www.meteor.com/install).
 
+For MacOS/Linux users:
+```
+curl https://install.meteor.com/ | sh
+```
+
 Create your project:
 
 ```
@@ -20,22 +25,21 @@ meteor create --bare graphql-baby
 cd graphql-baby
 ```
 
-Now we install our npm dependencies for server:
 
-```
-meteor npm i -S graphql graphql-load apollo-server-express uuid graphql-tools graphql-type-json apollo-live-server
-```
-
-Dependencies for the client:
-
-```
-meteor npm i -S react-apollo apollo-live-client apollo-client apollo-cache-inmemory apollo-link apollo-link-http apollo-link-ws apollo-morpher subscriptions-transport-ws apollo-upload-client
-```
 
 Now we add [this package](https://github.com/cult-of-coders/apollo) which elegantly blends Apollo inside Meteor:
 
 ```
 meteor add cultofcoders:apollo
+```
+
+We continue as we are instructed on the main page of the package where it tells us what npm dependencies to install
+
+Now we install our npm dependencies for running the server & the client.
+
+```
+meteor npm i -S graphql graphql-load apollo-server-express uuid graphql-tools graphql-type-json apollo-live-server
+meteor npm i -S react-apollo apollo-live-client apollo-client apollo-cache-inmemory apollo-link apollo-link-http apollo-link-ws apollo-morpher subscriptions-transport-ws apollo-upload-client
 ```
 
 Now open the project in your favorite IDE, and inside server/main.js write out:
@@ -79,4 +83,49 @@ query {
 }
 ```
 
-Woop Woop! That's it. You are now ready young skywalker. We'll be exploring lots of great stuff together, we will show you how awesome Web Development has become. The sheer elegance. The beauty. Oh!
+# Meteor's Eager Loading
+
+All the files inside server/ are loaded on the server-side eagerly.
+
+However, this is bad because ultimately you'll lose control and regret it. It is a nice feature to quickly start, but we won't use it. So let's setup an entry point. Inside `package.json` add this config:
+
+```json
+{
+  "meteor": {
+    "mainModule": {
+      "server": "server/main.js"
+    }
+  }
+}
+```
+
+Now from this `main.js` everything is imported and no files gets automatically loaded without our specific approval.
+
+If you want to load different things you could do it easily like this:
+
+
+```
+// file: server/sayDifferentThings.js
+import { load } from 'graphql-load';
+
+load({
+  typeDefs: `
+    type Query {
+      saySomethingElse: String!
+    }
+  `,
+  resolvers: {
+    Query: {
+      saySomethingElse: () => 'Hello, you!'
+    }
+  }
+})
+```
+
+Now, inside your `main.js` put the import on top:
+```js
+import './sayDifferentThings';
+```
+
+Now it's time to learn a bit about Types, Queries and Mutations. Then we'll learn how to work with the database and user authentication. Then we dive into how to properly organise our code. I'm excited to show you the sheer elegance and beauty of all this. Bare with me.
+

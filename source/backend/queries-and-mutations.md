@@ -20,6 +20,8 @@ Now. If you like to dig a lil' bit deeper into this definition. You may ask, wha
 Let's get back to our initial example where we loaded our data.
 
 ```js
+import { load } from 'graphql-load';
+
 load({
   typeDefs: `
     type Query {
@@ -34,7 +36,9 @@ load({
 });
 ```
 
-When we define our GraphQL API we have to define the way it looks via type definitions, and for each type definition we have to create resolvers (the logic, how it executes when it's interogated)
+When we define our GraphQL API we have to define the way it looks via type definitions, and for each type definition inside `Query` we have to create resolvers (the logic, how it executes when it's interogated)
+
+Using `load` function we are able to load multiple types, queries and resolvers that get automatically merged together, it's the easiest way. You can also use `load` to load just typeDefs or just resolvers. [Read more about grapqhl-load here](https://github.com/cult-of-coders/graphql-load). Everything we loaded is handled by our package, and getting passed to the `apollo-server` when we run `initialize()`, this means that if you load() stuff after you run initialize(), they will not be reflected in your GraphQL schema.
 
 Let me help you wrap your mind around this with more examples:
 
@@ -114,6 +118,7 @@ Resolvers:
 {
   Mutation: {
     insertPost(_, args) {
+5. Create a query that returns only the first 5 ele
       const { post } = args; // post has the form {title, description}
       console.log(post);
       // Do some action in the database
@@ -157,7 +162,7 @@ query {
   posts {
     title
     description
-    createdAt
+    isPublished
     comments {
       text
       author {
@@ -168,4 +173,25 @@ query {
 }
 ```
 
-4. How would you specify that a field is an `array`, that contains minimum 1 element of type `String` ?
+4. How would you specify that a field is an `array`, that contains minimum 1 element of type `String`?
+
+5. Create a query that returns the same message you passed:
+```
+query {
+  echo(message:"Is anybody out there?")
+}
+```
+
+6. Try to pass an argument to a subquery like this.
+
+```js
+query {
+  me {
+    fullName(withPrefix: true)
+  }
+}
+```
+
+And you can just return something different if `withPrefix` is true or false, doesn't matter. Be creative.
+
+7. Create a [fragment](https://graphql.org/learn/queries/#fragments). And use it.

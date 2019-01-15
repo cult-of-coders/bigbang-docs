@@ -1,6 +1,6 @@
 ---
 title: Uploads
-description: 'Let\'s upload a file using the form!'
+description: 'Lets upload a file using the form!'
 disqusPage: 'Recipes:Uploads'
 ---
 

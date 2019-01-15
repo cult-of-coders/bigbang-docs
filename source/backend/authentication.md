@@ -56,7 +56,7 @@ const AccountsModule = initAccounts({
 });
 
 load(AccountsModule);
-// Make sure initialize() runs after everything is loaded()
+// Make sure to import this file.
 ```
 
 If you want to learn more about `initAccounts`, check the docs here:
@@ -78,14 +78,13 @@ mutation {
 ```
 
 Now copy/paste that token, and inside `HTTP Headers` use:
-`meteor-login-token: ${token}`, and that's how your resolvers know who is requesting data.
+`"meteor-login-token": token`, and that's how your resolvers know who is requesting data.
 
 Your resolver function receives `root`, `args` and `context`. Inside `context` we store the current `userId` and `user`.
 
 An example to illustrate the usage:
 
 ```js
-// file: server/
 export default {
   Query: {
     invoices(root, args, context) {
@@ -148,6 +147,8 @@ query {
   }
 }
 ```
+
+For authorization and roles, you could use: https://github.com/alanning/meteor-roles 
 
 ---
 

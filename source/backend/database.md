@@ -156,8 +156,9 @@ Exercies:
 2. Extend the same todo query to allow pagination with pageSize, and pageNumber.
 3. Add to the ToDo input a `isChecked: Boolean`
 
-# Userful Packages
+# Useful Packages
 
-- Collection2
-- Hooks
-- Behaviors
+- Collection Hooks : https://github.com/matb33/meteor-collection-hooks
+- Collection Schema : https://github.com/aldeed/meteor-collection2
+- Collection Behaviors : https://github.com/zimme/meteor-collection-behaviours
+

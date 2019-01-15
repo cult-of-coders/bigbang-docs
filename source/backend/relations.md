@@ -121,7 +121,7 @@ With few lines of code you have an imense amount of power. However, as your app 
 To do so you define a collection as it was explained in structure and you create the equivallent of the above like this:
 
 ```js
-// src/db/posts/links.js
+// db/posts/links.js
 
 import { Posts, Comments, Users } from '../db';
 
@@ -140,7 +140,7 @@ Posts.addLinks({
 ```
 
 ```js
-// src/db/comments/links.js
+// db/comments/links.js
 
 import { Posts, Comments, Users } from '../db';
 
@@ -161,7 +161,7 @@ Comments.addLinks({
 ```
 
 ```js
-// src/db/users/links.js
+// db/users/links.js
 import { Posts, Comments, Users } from '../db';
 
 Users.addLinks({
@@ -177,7 +177,7 @@ Users.addLinks({
 ```
 
 ```js
-// src/db/links.js
+// db/links.js
 import './posts/links';
 import './users/links';
 import './comments/links';
