@@ -6,6 +6,8 @@ disqusPage: 'Starterpack:Setting Up'
 
 # Setting Up
 
+If you prefer using `webpack` and just leave Meteor for the backend part. It is ok. Feel free to do it, however in these chapters we are going to work with `Meteor` and our Apollo package to make things extra simple, and keep in mind that if at any point you would want to make the switch to `webpack` it is super possible.
+
 So, let's get started with React, let's connect to Apollo, add some routing, and see our first query!
 
 First things first, let's setup our structure. As you know, our client code will exist in `src/ui`

@@ -66,7 +66,7 @@ export default ({ children }) => {
 ```
 
 ```scss
-// src/ui/components/_style.scss
+// src/ui/components/_index.scss
 @import './Button/_style.scss';
 @import './Input/_style.scss';
 @import './Form/_style.scss';
@@ -77,7 +77,7 @@ And finally import it in your `main.scss`:
 ```scss
 @import '_antd';
 @import '_variables';
-@import '../components/_style';
+@import '../components/_index';
 ```
 
 Note: keep all your presentational components unique so you won't have any css class collisions.

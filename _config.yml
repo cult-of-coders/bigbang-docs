@@ -31,10 +31,12 @@ sidebar_categories:
     - backend/testing
     - backend/relations
     - backend/deployment
-    # - backend/authorization.md
 
-  # 'Frontend Basics':
-  #   - frontend/setting-up.md
+  'Frontend Basics':
+    - frontend/setting-up.md
+    - frontend/styling.md
+    - frontend/testing.md
+    - frontend/forms.md
   #   - frontend/routing.md
   #   - frontend/queries_and_mutations.md
   #   - frontend/forms.md
