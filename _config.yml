@@ -28,37 +28,34 @@ sidebar_categories:
     - backend/structure
     - backend/services
     - backend/events
-    - backend/testing
+    # - backend/testing
     - backend/relations
     - backend/deployment
 
   'Frontend Basics':
-    - frontend/setting-up.md
-    - frontend/styling.md
-    - frontend/testing.md
-    - frontend/forms.md
-  #   - frontend/routing.md
-  #   - frontend/queries_and_mutations.md
-  #   - frontend/forms.md
-  #   - frontend/mobx_basics.md
-  #   - frontend/authentication.md
-  #   - frontend/morpher.md
-  #   - frontend/molecule.md
-  #   - frontend/easify.md
+    - frontend/index
+    # - frontend/setting-up.md
+    # - frontend/styling.md
+    # - frontend/testing.md
+    # - frontend/forms.md
+    # - frontend/queries_and_mutations.md
+    # - frontend/forms.md
+    # - frontend/authentication.md
+    # - frontend/morpher.md
+    # - frontend/molecule.md
+    # - frontend/easify.md
 
-  # 'Recipes':
-  #   - recipes/testing.md
-  #   - recipes/deployment.md
-  #   - recipes/uploading.md
-  #   - recipes/emails.md
-  #   - recipes/reactive-data.md
-  #   - recipes/working-with-dates.md
-  #   - recipes/advanced-collections.md
+  'Recipes':
+    - recipes/index
+    # - recipes/deployment.md
+    # - recipes/uploading.md
+    # - recipes/emails.md
+    # - recipes/reactive-data.md
+    # - recipes/working-with-dates.md
+    # - recipes/advanced-collections.md
 
-  # 'Scaffolding Tool':
-  #   - cli/setup.md
-  #   - cli/basics.md
-  #   - cli/ui.md
+  'Command Line':
+    - cli/index
 
 github_repo: 'cult-of-coders/bigbang-tuts'
 content_root: 'source'
@@ -95,7 +92,7 @@ social_links:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.meteor-tuts.com
+url: http://www.big-bang.cc
 root: /
 permalink: :year/:month/:day/:title/
 ? permalink_defaults

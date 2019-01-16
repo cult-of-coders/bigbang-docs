@@ -62,6 +62,7 @@ load({
     }
 
     type Todo {
+      _id: ID!
       title: String!
     }
   `,
@@ -80,6 +81,7 @@ Now you can safely query:
 ```js
 query {
   todos {
+    _id
     title
   }
 }
@@ -130,6 +132,7 @@ Variables:
 
 ```js
 type Todo @mongo(name: "todos") {
+  _id: ID!
   title: String
 }
 ```

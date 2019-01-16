@@ -1,5 +1,5 @@
 ---
-title: Queries & Mutations
+title: Queries and Mutations
 description: 'Learn the basics about queries and mutations'
 disqusPage: 'Backend:Queries-and-Mutations'
 ---
@@ -8,12 +8,13 @@ disqusPage: 'Backend:Queries-and-Mutations'
 
 Please go through https://graphql.org/learn/, it explains really well how GraphQL can be defined. And, because we're developers and we don't want to re-invent the wheel, I will assume from now on that you have read it at least once.
 
-### What is the difference between a query and a mutation ?
+## The difference
 
 For GraphQL, in essence, there is really no difference, but it is an important distinction. An easy way to put it:
 
 **Query** = Fetching data without altering server's state
-**Mutation** = Action which may alter server's state.
+
+**Mutation** = Action which may alter server's state
 
 Now. If you like to dig a lil' bit deeper into this definition. You may ask, what if I want to fetch data, but also increase a counter somewhere, that I fetched this data X times? Is my query still a query or is it a mutation? I believe it matters how the user perceives it that makes the definition.
 
@@ -92,6 +93,8 @@ query {
 So. You are starting to see some similarities between defining queries and actual types. That's because there's really no difference in defining it. It's just the main `Query` type is the one that gets interogated (resolved). Same logic applies to main `Mutation` type.
 
 A bit confusing in the beginning I know... I know... but bare with me, by the time I'm finished with you, things will make sense.
+
+## Arguments & Variables
 
 Take a look and explore how to pass-in arguments:
 

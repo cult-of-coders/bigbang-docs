@@ -10,7 +10,7 @@ In this chapter we'll learn registration process and login & authentication.
 
 Meteor comes with a nice and simple authentication system. And we're gonna learn how to leverage it inside Apollo.
 
-# Setting Up
+## Setting Up
 
 Adding accounts to your GraphQL Schema:
 
@@ -62,7 +62,7 @@ load(AccountsModule);
 If you want to learn more about `initAccounts`, check the docs here:
 https://github.com/cult-of-coders/meteor-apollo-accounts
 
-# Usage
+## Usage
 
 You can register an account like this:
 
@@ -150,6 +150,3 @@ query {
 
 For authorization and roles, you could use: https://github.com/alanning/meteor-roles 
 
----
-
-### [Table of Contents](index.md)

@@ -1,1 +1,7 @@
 config:
+
+less:
+  javascriptEnabled: true
+  options:
+    javascriptEnabled: true
+  compress: true
