@@ -33,7 +33,7 @@ type User {
 ```
 
 ```js
-// entites/User.resolvers.js
+// entities/User.resolvers.js
 export default {
   User: {
     fullName: user => `${user.firstName} ${user.lastName}`,
